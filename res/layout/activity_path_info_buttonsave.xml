@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_save_buttons"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/saveTrackText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:text="Vuoi salvare la traccia?"/>
+ 
+    <RelativeLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btnSaveInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="false"
+            android:onClick="save"
+            android:text="Salva" />
+
+        <Button
+            android:id="@+id/btnCancelInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:onClick="cancel"
+            android:text="Cancella" />
+    
+    </RelativeLayout>
+</LinearLayout>

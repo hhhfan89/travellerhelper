@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_home" >
+
+    <item
+        android:id="@+id/actionbar_tracking"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/actionbar_tracking"
+        yourapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/actionbar_pointOfInterest"
+        android:icon="@drawable/ic_action_place"
+        android:title="@string/actionbar_pointOfInterest"
+        yourapp:showAsAction="always">
+        
+        <menu>
+            <item
+                android:id="@+id/actionbar_menuPoI_comment"
+                android:icon="@drawable/ic_action_comment"
+                android:title="@string/actionbar_menuPoI_comment"
+                yourapp:showAsAction="always"/>
+            <item
+                android:id="@+id/actionbar_menuPoI_photo"
+                android:icon="@drawable/ic_action_photo"
+                android:title="@string/actionbar_menuPoI_photo"
+                yourapp:showAsAction="always"/>
+            <item
+                android:id="@+id/actionbar_menuPoI_video"
+                android:icon="@drawable/ic_action_video"
+                android:title="@string/actionbar_menuPoI_video"
+                yourapp:showAsAction="always"/>
+            <item
+                android:id="@+id/actionbar_menuPoI_audio"
+                android:icon="@drawable/ic_action_audio"
+                android:title="@string/actionbar_menuPoI_audio"
+                yourapp:showAsAction="always"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/settings_title"/>
+
+</menu>

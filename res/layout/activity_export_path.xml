@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_export_path"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textview_filename"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Assegna un nome al file da esportare" />
+        
+		<EditText
+            android:id="@+id/edittext_filename"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome file" />
+		
+		<RelativeLayout
+            android:id="@+id/layout_export_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/button_export"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:onClick="exportPath"
+                android:text="Salva" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:onClick="cancel"
+                android:text="Cancella" />
+        </RelativeLayout>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory 
+        android:title="@string/settings_map_title" >
+        
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="followMe"
+            android:summary="@string/settings_map_followme_summary"
+            android:title="@string/settings_map_followme_title" />
+        
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="automaticColor"
+            android:title="@string/settings_map_automatic_color_title" />
+
+        <ListPreference
+            android:defaultValue="WALK"
+            android:enabled="true"
+            android:entries="@array/movingType"
+            android:entryValues="@array/movingTypeValues"
+            android:key="automaticColorSetting"
+            android:summary="@string/settings_map_moving_type_summary"
+            android:title="@string/settings_map_moving_type_title" />
+        
+        <ListPreference
+            android:defaultValue="BLACK"
+            android:entries="@array/mapLineColor"
+            android:entryValues="@array/mapLineColorValues"
+            android:key="listLineColorsMap"
+            android:summary="@string/settings_map_line_color_summary"
+            android:title="@string/settings_map_line_color_title" />
+        
+    </PreferenceCategory>
+</PreferenceScreen>

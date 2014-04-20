@@ -1,0 +1,58 @@
+package it.divito.touristexplorer;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.VideoView;
+
+
+/**
+ * This class enables control and playback of a POI video
+ * @author Stefano
+ *
+ */
+
+public class CustomVideoView extends VideoView {
+
+	// interfaccia utilizzata dal POI per le funzioni di play e stop
+    private PlayPauseListener mListener;
+    
+    public CustomVideoView(Context context) {
+        super(context);
+    }
+
+    public CustomVideoView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public CustomVideoView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    public void setPlayPauseListener(PlayPauseListener listener) {
+        mListener = listener;
+    }
+    
+
+    @Override
+    public void pause() {
+        super.pause();
+        if (mListener != null) {
+            mListener.onPause();
+        }
+    }
+
+    @Override
+    public void start() {
+        super.start();
+        if (mListener != null) {
+            mListener.onPlay();
+        }
+    }
+
+    
+    public interface PlayPauseListener {
+        void onPlay();
+        void onPause();
+    }
+
+}

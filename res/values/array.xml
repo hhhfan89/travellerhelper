@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="mapLineColor">
+        <item name="black">Black</item>
+        <item name="blue">Blue</item>
+        <item name="red">Red</item>
+        <item name="green">Green</item>
+        <item name="yellow">Yellow</item>
+    </string-array>
+    
+    <string-array name="mapLineColorValues">
+        <item name="black">BLACK</item>
+        <item name="blue">BLUE</item>
+        <item name="red">RED</item>
+        <item name="green">GREEN</item>
+        <item name="yellow">YELLOW</item>
+    </string-array>
+    
+    <string-array name="movingType">
+        <item name="piedi">A piedi</item>
+        <item name="automobile">In automobile</item>
+        <item name="bici">In bicicletta</item>
+    </string-array>
+    
+    <string-array name="movingTypeValues">
+        <item name="piedi">WALK</item>
+        <item name="automobile">VEHICLE</item>
+        <item name="bici">BIKE</item>
+    </string-array>
+
+    <string-array name="drawer_menu_title">
+       	<item>Lista tracce</item>
+        <item>Lista foto</item>
+        <item>Lista video</item>
+        <item>Lista audio</item>
+        <item>Lista commenti</item>
+        <item>Lista KMZ</item>
+    </string-array>
+
+    <string-array name="drawer_menu_subtitle">
+        <item>subtitle tracce</item>
+        <item>subtitle foto</item>
+        <item>subtitle video</item>
+        <item>subtitle audio</item>
+        <item>subtitle commento</item>
+        <item>subtitle kmz</item>
+    </string-array>
+    
+    <array name="drawer_menu_items_icon">
+        <item>list_icon</item>
+        <item>photo_marker</item>
+        <item>video_marker</item>
+        <item>audio_marker</item>
+        <item>comment_marker</item>
+        <item>show_path_icon</item>
+    </array>
+    
+</resources>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/preview_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/preview_layout"
+        android:layout_weight="10"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_details"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:onClick="details"
+  			android:drawableLeft="@drawable/about"
+            android:text="Dettagli" />
+        
+       	<Button
+            android:id="@+id/button_share"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:onClick="share"
+  			android:drawableLeft="@drawable/share"
+            android:text="Condividi" />
+       	
+       	<Button
+            android:id="@+id/button_show"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:onClick="show"
+  			android:drawableLeft="@drawable/show_path_icon"
+            android:text="Vedi" />
+       	
+    </LinearLayout>
+
+</LinearLayout>

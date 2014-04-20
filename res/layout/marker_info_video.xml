@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_gravity="center"
+	android:orientation="vertical" >
+
+    <it.divito.touristexplorer.CustomVideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+    
+   <!--<MediaController
+        android:id="@+id/mediaController"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoView"
+        android:layout_marginTop="30dp" >
+    </MediaController>
+    <Button
+        android:id="@+id/button_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:text="Dettagli"
+        android:onClick="details"
+         />  -->
+	
+</LinearLayout >

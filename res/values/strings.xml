@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">TouristExplorer</string>
+    
+    <string name="filename">Nome del file</string>
+    <string name="title">Titolo</string>
+    <string name="title_hint">Inserisci un titolo..</string>
+    <string name="description">Descrizione</string>
+    <string name="description_hint">Inserisci una descrizione..</string>
+    <string name="coordinates">Coordinate</string>
+    <string name="datetime_comment">Commento salvato il</string>
+    <string name="datetime_photo">Foto scattata il</string>
+    <string name="datetime_video">Video ripreso il</string>
+    <string name="datetime_photo">Audio registrato il</string>
+    <string name="videoContentDescription">Video preview</string>
+    <string name="photoContentDescription">Photo preview</string>
+   
+    <string name="save">Salva</string>
+    <string name="cancel">Cancella</string>
+    <string name="ok">OK</string>
+    <string name="turn_on_gps">Abilita GPS</string>
+    <string name="continue_without_GPS">Continua senza GPS</string>
+    <string name="GPS_not_fix">Rilevamento della posizione..</string>
+    <string name="GPS_fixed">GPS agganciato</string>
+    
+    
+    <string name="tooltip_start_tracking">Start tracking</string>
+    <string name="tooltip_stop_tracking">Stop tracking</string>
+    <string name="toolTip_poi">Aggiungi un nuovo Punto di Interesse</string>
+    
+    <!-- Action bar -->
+    <string name="actionbar_list">Lista traccie</string>
+    <string name="actionbar_tracking">Inizia tracking</string>
+    <string name="actionbar_pointOfInterest">Aggiungi un Punto di Interesse (PoI)</string>
+    <string name="actionbar_menuPoI_audio">Registra una traccia audio</string>
+    <string name="actionbar_menuPoI_photo">Scatta una foto</string>
+    <string name="actionbar_menuPoI_video">Registra un video</string>
+    <string name="actionbar_menuPoI_comment">Inserisci un commento</string>
+     
+    <string name="settings_title">Opzioni</string>
+    
+    <string name="settings_map_title">Opzioni mappa</string>
+    <string name="settings_map_followme_title">Attiva funzione Seguimi</string>
+    <string name="settings_map_followme_summary">Permetti all\'app di seguirti, anche quando non stai facendo il tracking</string>
+    <string name="settings_map_automatic_color_title">Colore linea automatico</string>
+	<string name="settings_map_moving_type_title">Tipo di movimento</string>
+	<string name="settings_map_moving_type_summary">Come ti stai muovendo?</string>
+    <string name="settings_map_line_color_title">Imposta il colore della linea</string>
+    <string name="settings_map_line_color_summary">Scegli il colore della linea del live-tracking</string>
+    
+	<string name="settings_kml_title">Opzioni Google Earth</string>
+	<string name="settings_kml_line_color_title">Imposta il colore della linea</string>
+    <string name="settings_kml_line_color_summary">Scegli il colore della linea del file KML</string>
+    
+	<string name="audio_record_label">Registrazione audio</string>
+    <string name="audio_record_start">Inizia la registrazione</string>
+    <string name="audio_record_stop">Ferma la registrazione</string>
+    
+    <string name="camera_label">Ferma la registrazione</string>
+    
+    <string name="save_and_export_label">Salvataggio traccia</string>
+    <string name="export_label">Esporta traccia</string>
+   	<string name="options_label">Opzioni</string>
+  	<string name="comment_label">Commento</string>
+  	
+    <string name="marker_title_audio">Audio</string>
+    <string name="marker_title_video">Video</string>
+    <string name="marker_title_photo">Foto</string>
+    <string name="marker_title_comment">Commento</string>
+   
+    <string name="list_paths_title">Lista tracce salvate</string>
+    <string name="list_paths_search_hint">Traccia da cercare..</string>
+    
+   	<string name="modify_poi_header">Modifica Punto di Interesse</string>
+    
+    <string name="path_info_start_address">Indirizzo di partenza</string>
+   	<string name="path_info_finish_address">Indirizzo di arrivo</string>
+    <string name="path_info_address_not_available">Indirizzo non disponibile</string>
+    <string name="path_info_start_datetime">Data di partenza</string>
+    <string name="path_info_finish_datetime">Data di arrivo</string>
+    <string name="path_info_track_time">Tempo trascorso</string>
+    <string name="path_info_track_speed">Velocità media</string>
+    <string name="path_info_total_distance">Distanza percorsa</string>
+     
+    <string name="show_path_info_title">Informazioni sulla traccia</string>
+    
+    <string name="poi_deleted">PoI eliminato</string>
+    <string name="alert_delete_poi">Vuoi eliminare anche i PoI relativi alla traccia appena eliminata?</string>
+        
+    <string name="error_provider_unavailable">Impossibile eseguire il tracking. Per favore accendere il gps o una connessione dati."></string>
+	<string name="error_no_locations">Impossibile continuare, nessuna locazione trovata!</string>
+	<string name="error_no_image">Nessuna immagine trovata!</string>
+	<string name="error_no_video">Nessun video trovato!</string>
+	<string name="error_no_audio">Nessuna traccia audio trovata!</string>
+	<string name="error_no_comment">Nessun commento trovato!</string>
+	<string name="error_no_kml">Nessuna file KMZ trovato!</string>
+	<string name="error_no_path">Nessun percorso trovato!</string>
+	<string name="error_no_gps">Per avere una localizzazione accurata il GPS deve essere attivo. Vuoi attivare il GPS?</string>
+	
+	<string name="message_start_tracking">Tracking iniziato</string>
+	<string name="message_stop_tracking">Tracking terminato</string>
+	<string name="message_continue_tracking">Vuoi continuare il tracking in background?</string>
+			
+	<string name="message_path_not_saved">Traccia non salvata</string>
+	<string name="message_path_not_exported">Traccia non esportata</string>
+	
+	<string name="message_photo_not_saved">Foto non salvata</string>
+	<string name="message_video_not_saved">Video non salvato</string>
+	<string name="message_audio_not_saved">Audio non salvato</string>
+	<string name="message_comment_not_saved">Commento non salvato</string>
+	
+	<string name="message_photo_saved">Foto salvata</string>
+	<string name="message_video_saved">Video salvato</string>
+	<string name="message_audio_saved">Audio salvato</string>	
+	<string name="message_comment_saved">Commento salvato</string>	
+
+	<!-- V2.0 -->
+	<string name="drawer_open">Apertura drawer</string>	
+	<string name="drawer_close">Chiusura drawer</string>	
+	
+</resources>
