@@ -71,6 +71,7 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 
 	private static boolean isTrackingStarted = false;
 	
+	
 	private GoogleMap mMap;
 	private TouristExplorerLocationSource mLocationSource;	
 	
