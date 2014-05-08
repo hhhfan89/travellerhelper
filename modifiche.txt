@@ -1,0 +1,17 @@
+Layout
+- activity_audio
+- activity_camera
+- activity_comment
+- export_path
+- main
+- activity_path_info_ok.xml
+- activity_path_info_save.xml
+------photo --------------------> da unire con video, oppure separare in maniera concreta (ora sono uguali) vedere bene!
+(?) activity_preferences.xml
+(?) save_export ----------------> bisognerebbe separare i due layout, e foi fare l'inflate
+(?) activity_splash.xml  -------> da sistemare
+------video
+
+
+Activity
+- AudioActivity
