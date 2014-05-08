@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_path_info_save"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/txt_path_info_save_save_track"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:text="@string/path_info_save_want_to_save"/>
+ 
+    <RelativeLayout
+        android:id="@+id/layout_path_info_save_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/btn_path_info_save_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="false"
+            android:onClick="save"
+            android:text="@string/path_info_save_save" />
+
+        <Button
+            android:id="@+id/btn_path_info_save_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:onClick="cancel"
+            android:text="@string/path_info_save_cancel" />
+    
+    </RelativeLayout>
+</LinearLayout>

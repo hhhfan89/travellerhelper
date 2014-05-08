@@ -1,0 +1,28 @@
+
+ 
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+ 
+	    <fragment 
+	android:id="@+id/map1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:name="it.divito.touristexplorer.path.ListPathsActivity_old"
+	/>
+	    <!-- 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="BELLA"
+        android:textSize="40dp" />
+    
+    <Button android:id="@+id/button"
+        android:text="ZZZZZZZZZZZZZZZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+ -->
+</RelativeLayout>
