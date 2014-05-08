@@ -1,7 +1,7 @@
 package it.divito.touristexplorer;
 
 import it.divito.touristexplorer.database.DatabaseAdapter;
-import it.divito.touristexplorer.path.ListPathsActivity;
+import it.divito.touristexplorer.path.PathListFragment;
 import it.divito.touristexplorer.path.PathInformationActivity;
 import it.divito.touristexplorer.poi.AudioActivity;
 import it.divito.touristexplorer.poi.CameraActivity;
@@ -37,6 +37,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -51,7 +52,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
 
@@ -67,7 +67,7 @@ import com.google.android.gms.maps.model.LatLng;
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity implements OnMapClickListener {
 
-	private static final String LOG_TAG = MainActivity.class.getName();
+	private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
 	private static boolean isTrackingStarted = false;
 	
@@ -110,6 +110,8 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 	private boolean mIsGPSFix = false;		// determina se il segnale GPS è stato acquisito
 	
 	
+	private Fragment mapFragment;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 	
@@ -131,8 +133,10 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 		setSideBar();
 
 		// Carica la mappa, se necessario
+		//mapFragment = new MyMapFragment();
+	//	setUpMapNew();
 		setUpMapIfNeeded();
-			
+		
 		// Creazione cartelle programma
 		makeAppDirectories();
 		
@@ -144,6 +148,7 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 		mMap.setLocationSource(mLocationSource);
 		mMap.setOnMapClickListener(this);
 		mMap.setMyLocationEnabled(true);
+		
 		
 	}
 
@@ -226,7 +231,7 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 
 			@Override
 			public void onReceive(Context context, Intent intent) {
-				Log.i(LOG_TAG, "connection receiver, onReceive");
+				Log.d(LOG_TAG, "connection receiver, onReceive");
 			}
 			
 		};
@@ -261,15 +266,16 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 	public void onResume() {
 		
 		super.onResume();
+		Log.d(LOG_TAG, "onResume");
 		if(!isTrackingStarted){
 			mLocationSource.getBestAvailableProvider();
 			setUpMapIfNeeded();
-			mMap.setMyLocationEnabled(true);
+		//	mMap.setMyLocationEnabled(true);
 		}
 	}
 	
 	
-	
+	/*
 	@Override
 	public void onBackPressed() {
 		if (isTrackingStarted) {
@@ -283,7 +289,11 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 			finish();
 			//return true;
 		}
+		
+		
 	}
+	*/
+	
 	
 
 
@@ -771,15 +781,17 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 	private void setUpMapIfNeeded() {
 		
 		if(mMap == null){
+			Log.d(LOG_TAG, "setUpMapIfNeeded:map null");
 			FragmentManager myFragmentManager = getSupportFragmentManager();
 			SupportMapFragment mySupportMapFragment = (SupportMapFragment) myFragmentManager
-					.findFragmentById(R.id.map);			
+					.findFragmentById(R.id.map);
+			mapFragment = mySupportMapFragment;
 			mMap = mySupportMapFragment.getExtendedMap();
-			Log.i("map null", "map null");
 		}
 		// Check if we were successful in obtaining the map.
 		if (mMap != null) {
-			Log.i("map not null", "map not null");
+			Log.d(LOG_TAG, "setUpMapIfNeeded: map not null");
+			
 			Location location = mLocationSource.getLastKnownLocation();
 			LatLng actualLatLng;
 			int zoom;
@@ -793,6 +805,7 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 				zoom = TouristExplorer.ZOOM_ITALY;
 			}
 				
+			mLocationSource.setMap(mMap);
 			mMap.setLocationSource(mLocationSource);
 			mMap.setMyLocationEnabled(true);
 			mMap.setOnMapClickListener(this);
@@ -963,91 +976,172 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
-	private void selectItem(int position) {
+	
+	
+	@Override
+	public void onBackPressed() {
 		
-		android.app.Fragment fragment = new MapActivity();
-	    Bundle args = new Bundle();
-	   /* args.putInt(PlanetFragment.ARG_PLANET_NUMBER, position);
-	    fragment.setArguments(args);*/
+		FragmentManager fm = getSupportFragmentManager();
+		int count = fm.getBackStackEntryCount();
+		Log.d(LOG_TAG, "onBackPressed:count" + fm.getBackStackEntryCount());
+		if (count > 0) {
+			Log.d(LOG_TAG, "onBackPressed:count" + fm.getBackStackEntryAt(count-1).getName());
+			getActionBar().setTitle(R.string.app_name);
+			fm.popBackStack(fm.getBackStackEntryAt(count-1).getName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        }
+		else{
+			super.onBackPressed();
+		    return;
+		}
+        
+	}
+	
+	
+	
+	private void setUpMapNew() {
+		
+		
+	    FragmentManager fragmentManager = getSupportFragmentManager();
+	    fragmentManager
+	    	.beginTransaction()
+	    	.replace(R.id.content_frame, mapFragment)
+            // Add this transaction to the back stack
+            //.addToBackStack(mapFragment.getClass().getSimpleName())
+	    	.commit();
+	  
 
-	    // Insert the fragment by replacing any existing fragment
-	    android.app.FragmentManager fragmentManager = getFragmentManager();
-	    fragmentManager.beginTransaction()
-	                   .replace(R.id.map, fragment)
-	                   .commit();
+	}
 
-	    // Highlight the selected item, update the title, and close the drawer
-	    mDrawerList.setItemChecked(position, true);
-	    setTitle("pos"+position);
-	    Log.e("bla", "bla");
+	
+	private void selectItem(int position) {
+
+		FragmentManager fragmentManager = getSupportFragmentManager();
+	    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+	    fragmentTransaction.hide(mapFragment);
+		
+	    Fragment fragment = null; 
 	    
-		/*
 		switch (position) {
+
 		case 0:
+			
 			dbAdapter.open();
 			Cursor c = dbAdapter.selectAllTracks();
 			if (c.moveToNext()) {
-				startActivityForResult(new Intent(MainActivity.this,
-						ListPathsActivity.class),
-						TouristExplorer.LIST_PATH_REQUEST);
+				invalidateOptionsMenu();
+				fragment = new PathListFragment();
 			} else {
 				noLocationMessage(R.string.error_no_path);
 			}
 			break;
+/*
 		case 1:
+
 			if (!Utils.isDirectoryEmpty(TouristExplorer.IMAGE_PATH))
+
 				startActivityForResult(new Intent(MainActivity.this,
+
 						GalleryImageActivity.class),
+
 						TouristExplorer.GALLERY_IMAGE_REQUEST);
+
 			else
+
 				noLocationMessage(R.string.error_no_image);
 
+
+
 			break;
+
 		case 2:
+
 			if (!Utils.isDirectoryEmpty(TouristExplorer.VIDEO_PATH))
+
 				startActivityForResult(new Intent(MainActivity.this,
+
 						GalleryVideoActivity.class),
+
 						TouristExplorer.GALLERY_VIDEO_REQUEST);
+
 			else
+
 				noLocationMessage(R.string.error_no_video);
+
 			break;
+
+
 
 		case 3:
+
 			if (!Utils.isDirectoryEmpty(TouristExplorer.AUDIO_PATH))
+
 				startActivityForResult(new Intent(this,
+
 						ListAudioTrackActivity.class),
+
 						TouristExplorer.GALLERY_AUDIO_REQUEST);
+
 			else
+
 				noLocationMessage(R.string.error_no_audio);
 
+
+
 			break;
+
+
 
 		case 4:
+
 			dbAdapter.open();
 
+
+
 			if (dbAdapter.selectAllComment().getCount() > 0)
+
 				startActivityForResult(new Intent(this,
+
 						ListCommentTrackActivity.class),
+
 						TouristExplorer.GALLERY_COMMENT_REQUEST);
+
 			else
+
 				noLocationMessage(R.string.error_no_comment);
 
+
+
 			break;
+
+
 
 		case 5:
+
 			if (!Utils.isDirectoryEmpty(TouristExplorer.KML_PATH))
+
 				startActivityForResult(new Intent(this, ListKmlActivity.class),
+
 						TouristExplorer.GALLERY_KMZ_REQUEST);
+
 			else
+
 				noLocationMessage(R.string.error_no_kml);
-			break;
-		default:
 
 			break;
-		}
 */
+		default:
+			break;
+
+		}
+
+		fragmentTransaction.replace(R.id.content_frame, fragment)
+			.addToBackStack(fragment.getClass().getSimpleName())
+			.commit();
 		mDrawerLayout.closeDrawer(mDrawerList);
 
+
 	}
+	
+	
 	
 }

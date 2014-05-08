@@ -35,10 +35,10 @@ public class AudioActivity extends Activity {
 	   
 	private Location mLocation = null;
 
-    private Button mRecordButton;
-    private Button mStopButton;
-    private Button mSaveButton;
-    private Button mCancelButton;
+    private Button mBtnRecord;
+    private Button mBtnStop;
+    private Button mBtnSave;
+    private Button mBtnCancel;
     
     private EditText mEditTitle;
     private EditText mEditComment;
@@ -64,12 +64,12 @@ public class AudioActivity extends Activity {
 		
 		setNames();
 		
-		mRecordButton = (Button) findViewById(R.id.button_record);
-		mStopButton = (Button) findViewById(R.id.button_stop);
-		mEditTitle = (EditText) findViewById(R.id.editTitle);
-		mEditComment = (EditText) findViewById(R.id.editComment);
-        mSaveButton = (Button) findViewById(R.id.button_save);
-        mCancelButton = (Button) findViewById(R.id.button_cancel); 
+		mBtnRecord = (Button) findViewById(R.id.btn_audio_record);
+		mBtnStop = (Button) findViewById(R.id.btn_audio_stop);
+		mEditTitle = (EditText) findViewById(R.id.edt_audio_title);
+		mEditComment = (EditText) findViewById(R.id.edt_audio_description);
+        mBtnSave = (Button) findViewById(R.id.btn_audio_save);
+        mBtnCancel = (Button) findViewById(R.id.btn_audio_cancel); 
 	   
     }
     
@@ -188,10 +188,10 @@ public class AudioActivity extends Activity {
 	    
     	mEditTitle.setEnabled(enable);
 		mEditComment.setEnabled(enable);
-		mSaveButton.setEnabled(enable);
-		mCancelButton.setEnabled(enable);
-		mStopButton.setEnabled(!enable);
-		mRecordButton.setEnabled(enable);
+		mBtnSave.setEnabled(enable);
+		mBtnCancel.setEnabled(enable);
+		mBtnStop.setEnabled(!enable);
+		mBtnRecord.setEnabled(enable);
 		
     }
     

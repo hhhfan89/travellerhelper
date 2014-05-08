@@ -45,7 +45,7 @@ public class PhotoActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.camera_custom);
+        setContentView(R.layout.activity_photo);
         
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.camera_photo_buttons,

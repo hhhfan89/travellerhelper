@@ -38,7 +38,7 @@ public class SaveAndExportPathActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
     	
     	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.activity_save_and_export_path);
+    	setContentView(R.layout.activity_save_export_path);
     	
     	mIntent = getIntent();
     	

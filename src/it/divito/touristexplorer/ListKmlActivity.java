@@ -44,7 +44,7 @@ public class ListKmlActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_list_paths);
+		setContentView(R.layout.fragment_path_list);
 		
 		mIntent = getIntent();
 		

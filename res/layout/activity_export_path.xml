@@ -1,4 +1,5 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_export_path"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
@@ -10,40 +11,40 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/textview_filename"
+            android:id="@+id/txt_export_path_filename"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Assegna un nome al file da esportare" />
+            android:text="@string/export_path_filename" />
         
 		<EditText
-            android:id="@+id/edittext_filename"
+            android:id="@+id/edt_export_path_filename"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome file" />
+            android:hint="@string/export_path_filename_hint" />
 		
 		<RelativeLayout
-            android:id="@+id/layout_export_buttons"
+            android:id="@+id/layout_export_path_buttons"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center_horizontal" >
 
             <Button
-                android:id="@+id/button_export"
+                android:id="@+id/btn_export_path_export"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="false"
                 android:onClick="exportPath"
-                android:text="Salva" />
+                android:text="@string/export_path_export" />
 
             <Button
-                android:id="@+id/button_cancel"
+                android:id="@+id/btn_export_path_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:onClick="cancel"
-                android:text="Cancella" />
+                android:text="@string/export_path_cancel" />
         </RelativeLayout>
 	</LinearLayout>
 </ScrollView>

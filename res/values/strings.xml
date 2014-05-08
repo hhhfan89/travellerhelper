@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
+    <!-- PREMESSA: 
+    	Ci sono sicuramente delle repliche (ad esempio la stringa di salvataggio, 
+    	di cancellazione, ecc): questo per garantire, nel futuro, una maggiore 
+    	flessibilità (es: se voglio cambiare il titolo della camera, vado a toccare
+    	solo quella, non tocco nient'altro)
+     -->
+    
     <string name="app_name">TouristExplorer</string>
     
+    <!-- GENERICI -->
     <string name="filename">Nome del file</string>
     <string name="title">Titolo</string>
     <string name="title_hint">Inserisci un titolo..</string>
@@ -12,11 +20,10 @@
     <string name="datetime_comment">Commento salvato il</string>
     <string name="datetime_photo">Foto scattata il</string>
     <string name="datetime_video">Video ripreso il</string>
-    <string name="datetime_photo">Audio registrato il</string>
+    <string name="datetime_audio">Audio registrato il</string>
     <string name="videoContentDescription">Video preview</string>
     <string name="photoContentDescription">Photo preview</string>
-   
-    <string name="save">Salva</string>
+   	<string name="save">Salva</string>
     <string name="cancel">Cancella</string>
     <string name="ok">OK</string>
     <string name="turn_on_gps">Abilita GPS</string>
@@ -25,9 +32,11 @@
     <string name="GPS_fixed">GPS agganciato</string>
     
     
+    <!-- TOOLTIP -->
     <string name="tooltip_start_tracking">Start tracking</string>
     <string name="tooltip_stop_tracking">Stop tracking</string>
     <string name="toolTip_poi">Aggiungi un nuovo Punto di Interesse</string>
+    
     
     <!-- Action bar -->
     <string name="actionbar_list">Lista traccie</string>
@@ -38,24 +47,75 @@
     <string name="actionbar_menuPoI_video">Registra un video</string>
     <string name="actionbar_menuPoI_comment">Inserisci un commento</string>
      
-    <string name="settings_title">Opzioni</string>
     
-    <string name="settings_map_title">Opzioni mappa</string>
-    <string name="settings_map_followme_title">Attiva funzione Seguimi</string>
-    <string name="settings_map_followme_summary">Permetti all\'app di seguirti, anche quando non stai facendo il tracking</string>
-    <string name="settings_map_automatic_color_title">Colore linea automatico</string>
-	<string name="settings_map_moving_type_title">Tipo di movimento</string>
-	<string name="settings_map_moving_type_summary">Come ti stai muovendo?</string>
-    <string name="settings_map_line_color_title">Imposta il colore della linea</string>
-    <string name="settings_map_line_color_summary">Scegli il colore della linea del live-tracking</string>
-    
-	<string name="settings_kml_title">Opzioni Google Earth</string>
-	<string name="settings_kml_line_color_title">Imposta il colore della linea</string>
-    <string name="settings_kml_line_color_summary">Scegli il colore della linea del file KML</string>
-    
+    <!-- AUDIO -->
+    <string name="audio_record">Registra</string>
+    <string name="audio_stop">Stop</string>
+    <string name="audio_title">Titolo</string>
+    <string name="audio_title_hint">Inserisci un titolo..</string>
+    <string name="audio_description">Descrizione</string>
+    <string name="audio_description_hint">Inserisci una descrizione..</string>
+    <string name="audio_save">Salva</string>
+    <string name="audio_cancel">Cancella</string>
 	<string name="audio_record_label">Registrazione audio</string>
     <string name="audio_record_start">Inizia la registrazione</string>
     <string name="audio_record_stop">Ferma la registrazione</string>
+    
+    
+    <!-- CAMERA (sono comuni sia ai video che alle foto) -->
+    <string name="camera_title">Titolo</string>
+    <string name="camera_title_hint">Inserisci un titolo..</string>
+    <string name="camera_description">Descrizione</string>
+    <string name="camera_description_hint">Inserisci una descrizione..</string>
+    <string name="camera_save">Salva</string>
+    <string name="camera_cancel">Cancella</string>
+    
+   
+    <!-- COMMENTO -->
+    <string name="comment_title">Titolo</string>
+    <string name="comment_title_hint">Inserisci un titolo..</string>
+    <string name="comment_description">Descrizione</string>
+    <string name="comment_description_hint">Inserisci una descrizione..</string>
+    <string name="comment_save">Salva</string>
+    <string name="comment_cancel">Cancella</string>
+    
+    
+    <!-- EXPORT PATH -->
+    <string name="export_path_filename">Assegna un nome al file da esportare</string>
+    <string name="export_path_filename_hint">Nome file</string>
+    <string name="export_path_export">Esporta</string>
+    <string name="export_path_cancel">Cancella</string>
+   
+    
+    <!-- PATH INFO: OK BUTTON -->
+    <string name="path_info_ok_ok">OK</string>
+    
+    
+    <!-- PATH INFO: SAVE BUTTONS -->
+    <string name="path_info_save_want_to_save">Vuoi salvare la traccia?</string>
+    <string name="path_info_save_save">Salva</string>
+    <string name="path_info_save_cancel">Cancella</string>
+
+    
+    <!-- PHOTO -->
+    
+    
+    
+    <!-- PREFERENCES -->
+    
+    
+    
+    <!-- SAVE/EXPORT PATH -->
+    
+    
+    
+    <!-- SPLASH -->
+    
+    
+    
+    <!-- VIDEO -->
+    
+    
     
     <string name="camera_label">Ferma la registrazione</string>
     
@@ -118,5 +178,19 @@
 	<!-- V2.0 -->
 	<string name="drawer_open">Apertura drawer</string>	
 	<string name="drawer_close">Chiusura drawer</string>	
+	
+	<!-- OPZIONI -->
+    <string name="settings_title">Opzioni</string>
+    <string name="settings_map_title">Opzioni mappa</string>
+    <string name="settings_map_followme_title">Attiva funzione Seguimi</string>
+    <string name="settings_map_followme_summary">Permetti all\'app di seguirti, anche quando non stai facendo il tracking</string>
+    <string name="settings_map_automatic_color_title">Colore linea automatico</string>
+	<string name="settings_map_moving_type_title">Tipo di movimento</string>
+	<string name="settings_map_moving_type_summary">Come ti stai muovendo?</string>
+    <string name="settings_map_line_color_title">Imposta il colore della linea</string>
+    <string name="settings_map_line_color_summary">Scegli il colore della linea del live-tracking</string>
+    <string name="settings_kml_title">Opzioni Google Earth</string>
+	<string name="settings_kml_line_color_title">Imposta il colore della linea</string>
+    <string name="settings_kml_line_color_summary">Scegli il colore della linea del file KML</string>
 	
 </resources>

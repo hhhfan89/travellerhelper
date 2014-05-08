@@ -21,7 +21,7 @@ public class SplashActivity extends Activity {
         //Hides the titlebar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.activity_splash_new);
+        setContentView(R.layout.activity_splash);
 
         Thread mythread = new Thread() {
             public void run() {

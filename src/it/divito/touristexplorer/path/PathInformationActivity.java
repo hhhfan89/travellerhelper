@@ -97,7 +97,7 @@ public class PathInformationActivity extends Activity {
 	    if(!trackingJustStopped){
 	    	LayoutInflater inflater = getLayoutInflater();
 	    	inflater.inflate(
-                 R.layout.activity_path_info_buttonok,
+                 R.layout.activity_path_info_ok,
                  (ViewGroup)findViewById(R.id.layout_buttons));
         }
 	    // Se il tracking è appena stato fermato, allora sotto le informazioni
@@ -106,7 +106,7 @@ public class PathInformationActivity extends Activity {
         	LayoutInflater inflater = getLayoutInflater();
              
         	inflater.inflate(
-                    R.layout.activity_path_info_buttonsave,
+                    R.layout.activity_path_info_save,
                     (ViewGroup)findViewById(R.id.layout_buttons));
         }
 	    

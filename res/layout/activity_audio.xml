@@ -1,32 +1,33 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_audio"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
     <LinearLayout 
-        android:id="@+id/controls"
+        android:id="@+id/layout_audio_controls"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
         <LinearLayout
-            android:id="@+id/buttons_camera"
+            android:id="@+id/layout_audio_record_buttons"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button_record"
+                android:id="@+id/btn_audio_record"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_weight="1"
                 android:drawableLeft="@drawable/record_icon"
                 android:onClick="record"
-                android:text="Registra" />
+                android:text="@string/audio_record" />
 
             <Button
-                android:id="@+id/button_stop"
+                android:id="@+id/btn_audio_stop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
@@ -34,64 +35,64 @@
                 android:drawableLeft="@drawable/stop"
                 android:enabled="false"
                 android:onClick="stop"
-                android:text="Stop" />
+                android:text="@string/audio_stop" />
         </LinearLayout>
 	
         <LinearLayout
-            android:id="@+id/linear"
+            android:id="@+id/layout_audio_naming"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textTitle"
+                android:id="@+id/txt_audio_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title" />
+                android:text="@string/audio_title" />
 
             <EditText
-                android:id="@+id/editTitle"
+                android:id="@+id/edt_audio_title"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:hint="@string/title_hint"
+                android:hint="@string/audio_title_hint"
                 android:imeOptions="actionNext" />
 
             <TextView
-                android:id="@+id/textComment"
+                android:id="@+id/txt_audio_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/description" />
+                android:text="@string/audio_description" />
 
             <EditText
-                android:id="@+id/editComment"
+                android:id="@+id/edt_audio_description"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:hint="@string/description_hint"
+                android:hint="@string/audio_description_hint"
                 android:imeOptions="actionDone" />
 
             <LinearLayout
-                android:id="@+id/buttons"
+                android:id="@+id/layout_audio_save_button"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/button_save"
+                    android:id="@+id/btn_audio_save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/save"
+                    android:text="@string/audio_save"
                     android:enabled="false"
                     android:onClick="save" />
 
                 <Button
-                    android:id="@+id/button_cancel"
+                    android:id="@+id/btn_audio_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/cancel"
+                    android:text="@string/audio_cancel"
                     android:enabled="false"
                     android:onClick="cancel" />
             </LinearLayout>

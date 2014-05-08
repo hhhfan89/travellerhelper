@@ -43,7 +43,7 @@ public class VideoActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
        
     	super.onCreate(savedInstanceState);
-        setContentView(R.layout.camera_custom);
+        setContentView(R.layout.activity_video);
         
         mIntent = getIntent();
         // Create an instance of Camera

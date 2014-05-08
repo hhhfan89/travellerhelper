@@ -1,63 +1,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_root"
+    android:id="@+id/layout_comment"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp" >
 
     <TextView
-        android:id="@+id/commentTitle"
+        android:id="@+id/txt_comment_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:text="@string/comment_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/commentTitleEdit"
+        android:id="@+id/edt_comment_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:hint="@string/title_hint"
+        android:hint="@string/comment_title_hint"
         android:imeOptions="actionNext"
         android:inputType="text" />
 
     <TextView
-        android:id="@+id/commentText"
+        android:id="@+id/txt_comment_description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/description"
+        android:text="@string/comment_description"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/commentEditText"
+        android:id="@+id/edt_comment_description"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="top"
-        android:hint="@string/description_hint"
+        android:hint="@string/comment_description_hint"
         android:imeOptions="actionDone"
         android:inputType="text"
         android:lines="3" />
 
     <RelativeLayout
-        android:id="@+id/btnLayout"
+        android:id="@+id/layout_comment_buttons"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="fill"
         android:gravity="center_horizontal" >
 
         <Button
-            android:id="@+id/button_save"
+            android:id="@+id/btn_comment_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="false"
-            android:text="@string/save" />
+            android:text="@string/comment_save" />
 
         <Button
-            android:id="@+id/button_cancel"
+            android:id="@+id/btn_comment_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="@string/cancel" />
+            android:text="@string/comment_cancel" />
     </RelativeLayout>
 
 </LinearLayout>
