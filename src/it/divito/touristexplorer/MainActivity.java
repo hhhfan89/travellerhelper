@@ -109,8 +109,8 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
     
 	private boolean mIsGPSFix = false;		// determina se il segnale GPS è stato acquisito
 	
-	
 	private Fragment mapFragment;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -133,8 +133,6 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 		setSideBar();
 
 		// Carica la mappa, se necessario
-		//mapFragment = new MyMapFragment();
-	//	setUpMapNew();
 		setUpMapIfNeeded();
 		
 		// Creazione cartelle programma
@@ -148,7 +146,6 @@ public class MainActivity extends ActionBarActivity implements OnMapClickListene
 		mMap.setLocationSource(mLocationSource);
 		mMap.setOnMapClickListener(this);
 		mMap.setMyLocationEnabled(true);
-		
 		
 	}
 

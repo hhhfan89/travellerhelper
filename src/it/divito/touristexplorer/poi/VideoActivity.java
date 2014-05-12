@@ -59,7 +59,7 @@ public class VideoActivity extends Activity {
         mCamera.setParameters(params);
         
         LayoutInflater inflater = getLayoutInflater();
-        View v = inflater.inflate(R.layout.camera_video_buttons,
+        View v = inflater.inflate(R.layout.activity_camera_button_video,
                  (ViewGroup)findViewById(R.id.buttons_camera));
         
         mRecordButton = (Button) v.findViewById(R.id.button_record);

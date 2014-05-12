@@ -70,7 +70,16 @@
     <string name="camera_save">Salva</string>
     <string name="camera_cancel">Cancella</string>
     
-   
+   	
+    <!-- CAMERA - PHOTO BUTTONS -->
+  	<string name="camera_photo_take_picture">Scatta</string>     
+    
+  	
+  	<!-- CAMERA - VIDEO BUTTONS -->
+  	<string name="camera_video_record">Registra</string>     
+  	<string name="camera_video_stop">Stop</string>     
+  	
+    
     <!-- COMMENTO -->
     <string name="comment_title">Titolo</string>
     <string name="comment_title_hint">Inserisci un titolo..</string>
@@ -86,6 +95,11 @@
     <string name="export_path_export">Esporta</string>
     <string name="export_path_cancel">Cancella</string>
    
+    
+    <!-- PATH LIST-->
+    <string name="path_list_title">Lista tracce salvate</string>
+    <string name="path_list_search_hint">Traccia da cercare..</string>
+    
     
     <!-- PATH INFO: OK BUTTON -->
     <string name="path_info_ok_ok">OK</string>

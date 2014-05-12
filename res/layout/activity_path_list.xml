@@ -1,16 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout_path_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
 	
-    <EditText android:id="@+id/listPathsInputSearch"
+    <EditText android:id="@+id/edt_path_list_search"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/list_paths_search_hint"
         android:inputType="textVisiblePassword"/>
   
     <ListView
-        android:id="@+id/listPathsListView"
+        android:id="@+id/lst_path_list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:divider="#b5b5b5"

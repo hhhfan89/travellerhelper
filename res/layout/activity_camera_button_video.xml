@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_camera_button_video"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btn_camera_video_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/record_icon"
+        android:onClick="record"
+        android:text="@string/camera_video_record" />
+
+    <Button
+        android:id="@+id/btn_camera_video_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/stop"
+        android:enabled="false"
+        android:onClick="stop"
+        android:text="@string/camera_video_stop" />
+
+</LinearLayout>

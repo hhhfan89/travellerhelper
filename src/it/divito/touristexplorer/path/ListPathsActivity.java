@@ -51,7 +51,7 @@ public class ListPathsActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_list_paths);
+		setContentView(R.layout.activity_path_list);
 		
 		EditText inputSearch = (EditText) findViewById(R.id.listPathsInputSearch);
 		

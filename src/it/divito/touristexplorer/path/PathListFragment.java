@@ -9,7 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.support.v7.widget.SearchView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -30,7 +33,7 @@ import android.widget.ListView;
  */
 
 @SuppressLint("NewApi")
-public class PathListFragment extends Fragment {
+public class PathListFragment extends ListFragment {
 	
 	private static final String LOG_TAG = PathListFragment.class.getSimpleName();
 	
@@ -104,11 +107,11 @@ public class PathListFragment extends Fragment {
 		mListView.setTextFilterEnabled(true);
 		
 		// Permette la ricerca di un file commento nella lista
-		/*inputSearch.addTextChangedListener(new TextWatcher() {
+		inputSearch.addTextChangedListener(new TextWatcher() {
              
            @Override
             public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-                getActivity().get.mAdapter.getFilter().filter(cs);   
+                mAdapter.getFilter().filter(cs);   
             }
              
             @Override
@@ -120,11 +123,10 @@ public class PathListFragment extends Fragment {
 			}
 			
         });
-		*/
 		
 		setHasOptionsMenu(true);
-
 		return rootView;
+	
 	}
 	
 	/*
