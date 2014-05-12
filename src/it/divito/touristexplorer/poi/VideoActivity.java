@@ -43,14 +43,14 @@ public class VideoActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
        
     	super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video);
+        setContentView(R.layout.activity_camera);
         
         mIntent = getIntent();
         // Create an instance of Camera
         mCamera = getCameraInstance();
         // Create our Preview view and set it as the content of our activity.
         mPreview = new CameraPreview(this, mCamera);
-        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
+        FrameLayout preview = (FrameLayout) findViewById(R.id.flayout_camera_preview);
         preview.addView(mPreview);
         
         params = mCamera.getParameters();
@@ -60,10 +60,10 @@ public class VideoActivity extends Activity {
         
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_camera_button_video,
-                 (ViewGroup)findViewById(R.id.buttons_camera));
+                 (ViewGroup)findViewById(R.id.layout_camera_button_video));
         
-        mRecordButton = (Button) v.findViewById(R.id.button_record);
-	    mStopButton = (Button) v.findViewById(R.id.button_stop);
+        mRecordButton = (Button) v.findViewById(R.id.btn_camera_video_record);
+	    mStopButton = (Button) v.findViewById(R.id.btn_camera_video_stop);
 	    
     }
 	

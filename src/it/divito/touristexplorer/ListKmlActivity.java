@@ -49,7 +49,7 @@ public class ListKmlActivity extends Activity {
 		mIntent = getIntent();
 		
 		mInputSearch = (EditText) findViewById(R.id.listPathsInputSearch);
-		mListView = (ListView) findViewById(R.id.listPathsListView);
+		mListView = (ListView) findViewById(R.id.list);
 		
 		ArrayList<String> kmlList = Utils.getFiles(TouristExplorer.KML_PATH);
 		kmlNameList = Utils.getFilename(kmlList);

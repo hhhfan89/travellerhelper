@@ -37,7 +37,7 @@ public class ExportPathActivity extends Activity {
     	super.onCreate(savedInstanceState);
     	setContentView(R.layout.activity_export_path);
     	
-    	mEditFilename = (EditText) findViewById(R.id.edittext_filename);
+    	mEditFilename = (EditText) findViewById(R.id.edt_export_path_filename);
     	
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND, WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
 	    

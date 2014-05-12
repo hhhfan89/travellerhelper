@@ -42,8 +42,8 @@ public class CommentActivity extends Activity {
 		super.onCreate(savedInstanceState);
 	    setContentView(R.layout.activity_comment);
 	    
-	    mEditTitle = (EditText) findViewById(R.id.commentTitleEdit);
-		mEditDescription = (EditText) findViewById(R.id.commentEditText);
+	    mEditTitle = (EditText) findViewById(R.id.edt_comment_title);
+		mEditDescription = (EditText) findViewById(R.id.edt_comment_description);
 	    
 	    mButtonSave = (Button) findViewById(R.id.button_save);
 	    mButtonCancel = (Button) findViewById(R.id.button_cancel); 

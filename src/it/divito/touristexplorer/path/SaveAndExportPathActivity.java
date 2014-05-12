@@ -61,7 +61,6 @@ public class SaveAndExportPathActivity extends Activity {
 			}
 			
 		});
-		
 	}
     
     

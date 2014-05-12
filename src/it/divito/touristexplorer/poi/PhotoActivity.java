@@ -49,9 +49,9 @@ public class PhotoActivity extends Activity {
         
         LayoutInflater inflater = getLayoutInflater();
         View v = inflater.inflate(R.layout.activity_camera_button_photo,
-                 (ViewGroup)findViewById(R.id.buttons_camera));
+                 (ViewGroup)findViewById(R.id.layout_camera_button_photo));
         
-        mButtonTakePicture = (Button) v.findViewById(R.id.button_take);
+        mButtonTakePicture = (Button) v.findViewById(R.id.btn_camera_photo_take_picture);
         intent = getIntent();
         
         // Crea una nuova istanza della camera
@@ -59,7 +59,7 @@ public class PhotoActivity extends Activity {
         // Crea la preview della camera, e la visualizza nell'activity
         mPreview = new CameraPreview(this, mCamera);
        
-        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
+        FrameLayout preview = (FrameLayout) findViewById(R.id.flayout_camera_preview);
         preview.addView(mPreview);
         
         // Opzioni per la camera

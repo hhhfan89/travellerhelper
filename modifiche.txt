@@ -18,3 +18,10 @@ Layout
 
 Activity
 - AudioActivity
+
+
+
+
+12/05:
+rivedere FragmentPathList, perchè il click sui singoli item non funziona (ne tantomeno sugli imagebutton), vedere se 
+conviene fare con ListFragemnt!!! 

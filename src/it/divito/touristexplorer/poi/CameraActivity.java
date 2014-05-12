@@ -56,11 +56,11 @@ public class CameraActivity extends Activity {
 	    mRequest = mIntent.getStringExtra("request_type");
 	    location = (Location) mIntent.getParcelableExtra("location");
 		
-	    mImageView = (ImageView) findViewById(R.id.video_preview);
-		mEditTitle = (EditText) findViewById(R.id.editTitle);
-		mEditDescription = (EditText) findViewById(R.id.editDescription);
-		mButtonSave = (Button) findViewById(R.id.button_save);
-		mButtonCancel = (Button) findViewById(R.id.button_cancel); 
+	    mImageView = (ImageView) findViewById(R.id.img_video_preview);
+		mEditTitle = (EditText) findViewById(R.id.edt_camera_title);
+		mEditDescription = (EditText) findViewById(R.id.edt_camera_description);
+		mButtonSave = (Button) findViewById(R.id.btn_camera_save);
+		mButtonCancel = (Button) findViewById(R.id.btn_camera_cancel); 
 		
 		// A seconda del tipo di POI (foto o video) che l'utente
 		// vuole registrare, verrà avviata l'activity richiesta. 

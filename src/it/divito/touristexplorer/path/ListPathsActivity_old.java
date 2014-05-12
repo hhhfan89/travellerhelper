@@ -59,9 +59,9 @@ public class ListPathsActivity_old extends Activity {
 		dbAdapter = ((MyApplication)getApplication()).dbAdapter;
 		dbAdapter.open();
 		
-		mListView = (ListView) findViewById(R.id.listPathsListView);
+		mListView = (ListView) findViewById(R.id.list);
 		
-		mAdapter = new ArrayAdapter<String>(this, R.layout.item_track_list, R.id.path_item);
+		mAdapter = new ArrayAdapter<String>(this, R.layout.fragment_path_item, R.id.path_item);
 		populateListView();
 		
 		mListView.setAdapter(mAdapter);
