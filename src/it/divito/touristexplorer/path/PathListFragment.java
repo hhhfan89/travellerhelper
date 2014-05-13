@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,6 +21,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.SearchView.OnQueryTextListener;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -78,6 +82,18 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 		populateListView();
 		
 		mListView.setAdapter(mAdapter);
+		mListView.setTextFilterEnabled(true);
+		mListView.setOnItemClickListener(new OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View view, int pos, long row) {
+            	String s = (String) ((TextView) view.findViewById(R.id.path_item)).getText();
+            	Toast.makeText(getActivity().getApplicationContext(), 
+    		    		"TODO: POPUP LIST FOR " + s, 
+    		    		Toast.LENGTH_LONG).show(); 
+            }
+        });
+		
 		/*mListView.setTextFilterEnabled(true);
 		
 		final LayoutInflater factory = getActivity().getLayoutInflater();
@@ -113,14 +129,7 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 			}
 		});
 		  */
-		mListView.setOnItemClickListener(new OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View view, int pos,
-                    long row) {
-            	Log.d(LOG_TAG, "btnPathShow" + pos + ",r" + row);
-            }
-        });
+		
 		
 		// Permette la ricerca di un file commento nella lista
 		/*inputSearch.addTextChangedListener(new TextWatcher() {
@@ -156,6 +165,9 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 	public void onCreateOptionsMenu(
 	      Menu menu, MenuInflater inflater) {
 		Log.d(LOG_TAG, "onCreateOptionsMenu");
+		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+		getActivity().getActionBar().setHomeButtonEnabled(true);
+	    
 		menu.getItem(0).setVisible(false);
 		menu.getItem(1).setVisible(false);
 		menu.getItem(2).setVisible(false);
@@ -165,6 +177,29 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 		MenuItem searchItem = menu.findItem(R.id.action_search);
 		SearchView searchView = (SearchView) searchItem.getActionView();
 		searchView.setQueryHint("Ricerca la traccia");
+		SearchManager searchManager = (SearchManager) getActivity().getSystemService( Context.SEARCH_SERVICE );
+		searchView.setSearchableInfo( searchManager.getSearchableInfo( getActivity().getComponentName() ) );
+		
+		searchView.setOnQueryTextListener(new OnQueryTextListener() {
+			
+			@Override
+			public boolean onQueryTextSubmit(String arg0) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+			
+			@Override
+			public boolean onQueryTextChange(String newText) {
+				if (TextUtils.isEmpty(newText)) {
+		            mListView.clearTextFilter();
+		        } else {
+		            mListView.setFilterText(newText.toString());
+		        }
+		        return true;
+			}
+		});
+		
+		
 	}
 	
 	

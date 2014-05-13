@@ -3,16 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 	
-     
-    <Button android:id="@+id/listPathsInputSearch"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/list_paths_search_hint"
-        android:text="cia"
-        android:inputType="textVisiblePassword"/>
-   
-   
-    <ListView
+     <ListView
         android:id="@+id/path_list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
