@@ -1267,12 +1267,12 @@ containing a value of this type.
         public static final int collapseActionView=0x7f06000d;
         public static final int content_frame=0x7f060073;
         public static final int default_activity_button=0x7f060029;
-        public static final int delete=0x7f0600de;
+        public static final int delete=0x7f0600e2;
         public static final int dialog=0x7f06000e;
         public static final int disableHome=0x7f060008;
         public static final int drawer_layout=0x7f060072;
         public static final int dropdown=0x7f06000f;
-        public static final int edit=0x7f0600df;
+        public static final int edit=0x7f0600e3;
         public static final int edit_description=0x7f06009b;
         public static final int edit_filename=0x7f060099;
         public static final int edit_query=0x7f060039;
@@ -1306,7 +1306,7 @@ containing a value of this type.
         public static final int image=0x7f060028;
         public static final int imageView=0x7f0600a4;
         public static final int img_video_preview=0x7f060053;
-        public static final int info=0x7f0600dd;
+        public static final int info=0x7f0600e1;
         public static final int item=0x7f0600ab;
         public static final int kml_item=0x7f0600a5;
         public static final int layout_audio=0x7f060045;
@@ -1373,6 +1373,10 @@ containing a value of this type.
         public static final int ns_menu_row=0x7f06009c;
         public static final int path_item=0x7f0600a1;
         public static final int path_list=0x7f0600a2;
+        public static final int path_list_delete=0x7f0600df;
+        public static final int path_list_export=0x7f0600de;
+        public static final int path_list_info=0x7f0600e0;
+        public static final int path_list_show=0x7f0600dd;
         public static final int preview_layout=0x7f0600cd;
         public static final int progress_circular=0x7f060037;
         public static final int progress_horizontal=0x7f060038;
@@ -1530,8 +1534,9 @@ containing a value of this type.
         public static final int menu_actionbar=0x7f0e0000;
         public static final int menu_actionbar_list_path=0x7f0e0001;
         public static final int menu_gallery_image=0x7f0e0002;
-        public static final int show_path_menu=0x7f0e0003;
-        public static final int show_poi_menu=0x7f0e0004;
+        public static final int menu_list_path_options=0x7f0e0003;
+        public static final int show_path_menu=0x7f0e0004;
+        public static final int show_poi_menu=0x7f0e0005;
     }
     public static final class string {
         public static final int GPS_fixed=0x7f0b0035;
@@ -1585,7 +1590,7 @@ containing a value of this type.
         public static final int actionbar_menuPoI_video=0x7f0b003e;
         public static final int actionbar_pointOfInterest=0x7f0b003b;
         public static final int actionbar_tracking=0x7f0b003a;
-        public static final int alert_delete_poi=0x7f0b007a;
+        public static final int alert_delete_poi=0x7f0b007e;
         /**  PREMESSA: 
     	Ci sono sicuramente delle repliche (ad esempio la stringa di salvataggio, 
     	di cancellazione, ecc): questo per garantire, nel futuro, una maggiore 
@@ -1633,13 +1638,7 @@ containing a value of this type.
         public static final int camera_cancel=0x7f0b0050;
         public static final int camera_description=0x7f0b004d;
         public static final int camera_description_hint=0x7f0b004e;
-        /**  PHOTO 
- PREFERENCES 
- SAVE/EXPORT PATH 
- SPLASH 
- VIDEO 
-         */
-        public static final int camera_label=0x7f0b0064;
+        public static final int camera_label=0x7f0b0068;
         /**  CAMERA - PHOTO BUTTONS 
          */
         public static final int camera_photo_take_picture=0x7f0b0051;
@@ -1656,7 +1655,7 @@ containing a value of this type.
         public static final int comment_cancel=0x7f0b0059;
         public static final int comment_description=0x7f0b0056;
         public static final int comment_description_hint=0x7f0b0057;
-        public static final int comment_label=0x7f0b0068;
+        public static final int comment_label=0x7f0b006c;
         public static final int comment_save=0x7f0b0058;
         /**  COMMENTO 
          */
@@ -1725,20 +1724,20 @@ containing a value of this type.
         public static final int datetime_video=0x7f0b002b;
         public static final int description=0x7f0b0026;
         public static final int description_hint=0x7f0b0027;
-        public static final int drawer_close=0x7f0b0092;
+        public static final int drawer_close=0x7f0b0096;
         /**  V2.0 
          */
-        public static final int drawer_open=0x7f0b0091;
-        public static final int error_no_audio=0x7f0b007f;
-        public static final int error_no_comment=0x7f0b0080;
-        public static final int error_no_gps=0x7f0b0083;
-        public static final int error_no_image=0x7f0b007d;
-        public static final int error_no_kml=0x7f0b0081;
-        public static final int error_no_locations=0x7f0b007c;
-        public static final int error_no_path=0x7f0b0082;
-        public static final int error_no_video=0x7f0b007e;
-        public static final int error_provider_unavailable=0x7f0b007b;
-        public static final int export_label=0x7f0b0066;
+        public static final int drawer_open=0x7f0b0095;
+        public static final int error_no_audio=0x7f0b0083;
+        public static final int error_no_comment=0x7f0b0084;
+        public static final int error_no_gps=0x7f0b0087;
+        public static final int error_no_image=0x7f0b0081;
+        public static final int error_no_kml=0x7f0b0085;
+        public static final int error_no_locations=0x7f0b0080;
+        public static final int error_no_path=0x7f0b0086;
+        public static final int error_no_video=0x7f0b0082;
+        public static final int error_provider_unavailable=0x7f0b007f;
+        public static final int export_label=0x7f0b006a;
         public static final int export_path_cancel=0x7f0b005d;
         public static final int export_path_export=0x7f0b005c;
         /**  EXPORT PATH 
@@ -1748,31 +1747,31 @@ containing a value of this type.
         /**  GENERICI 
          */
         public static final int filename=0x7f0b0023;
-        public static final int list_paths_search_hint=0x7f0b006e;
-        public static final int list_paths_title=0x7f0b006d;
-        public static final int marker_title_audio=0x7f0b0069;
-        public static final int marker_title_comment=0x7f0b006c;
-        public static final int marker_title_photo=0x7f0b006b;
-        public static final int marker_title_video=0x7f0b006a;
-        public static final int message_audio_not_saved=0x7f0b008b;
-        public static final int message_audio_saved=0x7f0b008f;
-        public static final int message_comment_not_saved=0x7f0b008c;
-        public static final int message_comment_saved=0x7f0b0090;
-        public static final int message_continue_tracking=0x7f0b0086;
-        public static final int message_path_not_exported=0x7f0b0088;
-        public static final int message_path_not_saved=0x7f0b0087;
-        public static final int message_photo_not_saved=0x7f0b0089;
-        public static final int message_photo_saved=0x7f0b008d;
-        public static final int message_start_tracking=0x7f0b0084;
-        public static final int message_stop_tracking=0x7f0b0085;
-        public static final int message_video_not_saved=0x7f0b008a;
-        public static final int message_video_saved=0x7f0b008e;
-        public static final int modify_poi_header=0x7f0b006f;
+        public static final int list_paths_search_hint=0x7f0b0072;
+        public static final int list_paths_title=0x7f0b0071;
+        public static final int marker_title_audio=0x7f0b006d;
+        public static final int marker_title_comment=0x7f0b0070;
+        public static final int marker_title_photo=0x7f0b006f;
+        public static final int marker_title_video=0x7f0b006e;
+        public static final int message_audio_not_saved=0x7f0b008f;
+        public static final int message_audio_saved=0x7f0b0093;
+        public static final int message_comment_not_saved=0x7f0b0090;
+        public static final int message_comment_saved=0x7f0b0094;
+        public static final int message_continue_tracking=0x7f0b008a;
+        public static final int message_path_not_exported=0x7f0b008c;
+        public static final int message_path_not_saved=0x7f0b008b;
+        public static final int message_photo_not_saved=0x7f0b008d;
+        public static final int message_photo_saved=0x7f0b0091;
+        public static final int message_start_tracking=0x7f0b0088;
+        public static final int message_stop_tracking=0x7f0b0089;
+        public static final int message_video_not_saved=0x7f0b008e;
+        public static final int message_video_saved=0x7f0b0092;
+        public static final int modify_poi_header=0x7f0b0073;
         public static final int ok=0x7f0b0031;
-        public static final int options_label=0x7f0b0067;
-        public static final int path_info_address_not_available=0x7f0b0072;
-        public static final int path_info_finish_address=0x7f0b0071;
-        public static final int path_info_finish_datetime=0x7f0b0074;
+        public static final int options_label=0x7f0b006b;
+        public static final int path_info_address_not_available=0x7f0b0076;
+        public static final int path_info_finish_address=0x7f0b0075;
+        public static final int path_info_finish_datetime=0x7f0b0078;
         /**  PATH INFO: OK BUTTON 
          */
         public static final int path_info_ok_ok=0x7f0b0060;
@@ -1781,34 +1780,45 @@ containing a value of this type.
         /**  PATH INFO: SAVE BUTTONS 
          */
         public static final int path_info_save_want_to_save=0x7f0b0061;
-        public static final int path_info_start_address=0x7f0b0070;
-        public static final int path_info_start_datetime=0x7f0b0073;
-        public static final int path_info_total_distance=0x7f0b0077;
-        public static final int path_info_track_speed=0x7f0b0076;
-        public static final int path_info_track_time=0x7f0b0075;
+        public static final int path_info_start_address=0x7f0b0074;
+        public static final int path_info_start_datetime=0x7f0b0077;
+        public static final int path_info_total_distance=0x7f0b007b;
+        public static final int path_info_track_speed=0x7f0b007a;
+        public static final int path_info_track_time=0x7f0b0079;
+        public static final int path_list_delete=0x7f0b0066;
+        public static final int path_list_export=0x7f0b0065;
+        public static final int path_list_info=0x7f0b0067;
         public static final int path_list_search_hint=0x7f0b005f;
+        /**  PHOTO 
+ PREFERENCES 
+ SAVE/EXPORT PATH 
+ SPLASH 
+ VIDEO 
+============ CONTEXT MENU ============ 
+         */
+        public static final int path_list_show=0x7f0b0064;
         /**  PATH LIST
          */
         public static final int path_list_title=0x7f0b005e;
         public static final int photoContentDescription=0x7f0b002e;
-        public static final int poi_deleted=0x7f0b0079;
+        public static final int poi_deleted=0x7f0b007d;
         public static final int save=0x7f0b002f;
-        public static final int save_and_export_label=0x7f0b0065;
-        public static final int settings_kml_line_color_summary=0x7f0b009e;
-        public static final int settings_kml_line_color_title=0x7f0b009d;
-        public static final int settings_kml_title=0x7f0b009c;
-        public static final int settings_map_automatic_color_title=0x7f0b0097;
-        public static final int settings_map_followme_summary=0x7f0b0096;
-        public static final int settings_map_followme_title=0x7f0b0095;
-        public static final int settings_map_line_color_summary=0x7f0b009b;
-        public static final int settings_map_line_color_title=0x7f0b009a;
-        public static final int settings_map_moving_type_summary=0x7f0b0099;
-        public static final int settings_map_moving_type_title=0x7f0b0098;
-        public static final int settings_map_title=0x7f0b0094;
+        public static final int save_and_export_label=0x7f0b0069;
+        public static final int settings_kml_line_color_summary=0x7f0b00a2;
+        public static final int settings_kml_line_color_title=0x7f0b00a1;
+        public static final int settings_kml_title=0x7f0b00a0;
+        public static final int settings_map_automatic_color_title=0x7f0b009b;
+        public static final int settings_map_followme_summary=0x7f0b009a;
+        public static final int settings_map_followme_title=0x7f0b0099;
+        public static final int settings_map_line_color_summary=0x7f0b009f;
+        public static final int settings_map_line_color_title=0x7f0b009e;
+        public static final int settings_map_moving_type_summary=0x7f0b009d;
+        public static final int settings_map_moving_type_title=0x7f0b009c;
+        public static final int settings_map_title=0x7f0b0098;
         /**  OPZIONI 
          */
-        public static final int settings_title=0x7f0b0093;
-        public static final int show_path_info_title=0x7f0b0078;
+        public static final int settings_title=0x7f0b0097;
+        public static final int show_path_info_title=0x7f0b007c;
         public static final int title=0x7f0b0024;
         public static final int title_hint=0x7f0b0025;
         public static final int toolTip_poi=0x7f0b0038;

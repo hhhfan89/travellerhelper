@@ -131,6 +131,14 @@
     
     
     
+    <!--============ CONTEXT MENU ============ -->
+    <string name="path_list_show">Visualizza la traccia</string>
+    <string name="path_list_export">Esporta la traccia</string>
+    <string name="path_list_delete">Elimina la traccia</string>
+    <string name="path_list_info">Informazione sulla traccia</string>
+    
+    
+    
     <string name="camera_label">Ferma la registrazione</string>
     
     <string name="save_and_export_label">Salvataggio traccia</string>

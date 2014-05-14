@@ -24,6 +24,8 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.SearchView.OnQueryTextListener;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,12 +33,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
  
@@ -83,14 +87,13 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 		
 		mListView.setAdapter(mAdapter);
 		mListView.setTextFilterEnabled(true);
-		mListView.setOnItemClickListener(new OnItemClickListener() {
+		registerForContextMenu(mListView);
 
+		mListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View view, int pos, long row) {
             	String s = (String) ((TextView) view.findViewById(R.id.path_item)).getText();
-            	Toast.makeText(getActivity().getApplicationContext(), 
-    		    		"TODO: POPUP LIST FOR " + s, 
-    		    		Toast.LENGTH_LONG).show(); 
+            	getActivity().openContextMenu(view);
             }
         });
 		
@@ -203,6 +206,43 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 	}
 	
 	
+	
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+            ContextMenuInfo menuInfo) {
+		super.onCreateContextMenu(menu, v, menuInfo);
+		MenuInflater inflater = getActivity().getMenuInflater();
+		inflater.inflate(R.menu.menu_list_path_options, menu);
+	}
+	
+	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		
+		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+		RelativeLayout r = (RelativeLayout) info.targetView;
+		String trackName = ((TextView) r.findViewById(R.id.path_item)).getText().toString();
+
+        switch(item.getItemId()){
+        
+        case R.id.path_list_show:
+        	showPath(trackName);
+        	break;
+        case R.id.path_list_export:
+        	exportPath(trackName);
+       	 	break;
+        case R.id.path_list_delete:
+        	deletePath(trackName);
+       	 	break;
+        case R.id.path_list_info:
+        	infoPath(trackName);
+       	 	break;
+        
+        }
+        
+		return super.onContextItemSelected(item);
+	}
+	
 	/**
 	 * Populates the list with tracks in memory
 	 */
@@ -218,34 +258,31 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 	}
 	
 	
-	/*public void showPathInformation(View v){
+	
+	public void infoPath(String trackName){
 		
-		String trackName = getTrackName(v);
 		Cursor cursorTrack = dbAdapter.selectTrack(trackName);
 		
 		if (cursorTrack.moveToNext()) {
-			
+			/*
 			Intent i = new Intent(ListPathsActivity.this, PathInformationActivity.class);
 			i.putExtra("trackID", cursorTrack.getInt(cursorTrack.getColumnIndex(TouristExplorer.COLUMN_ID)));
 			i.putExtra("trackName", cursorTrack.getString(cursorTrack.getColumnIndex(TouristExplorer.COLUMN_NAME)));
 			
 			startActivity(i);
-		
+			 */
 		}
 		
-	}*/
+	}
 	
 	
 	/**
 	 * Export the selected track in a KMZ file
 	 * @param View view the selected track
 	 */
-	public void exportPath(View view){
+	public void exportPath(String trackName){
 		
 		Log.d(LOG_TAG, "exportPath inside");
-		
-		
-		String trackName = getTrackName(view);
 		Cursor cursorTrack = dbAdapter.selectTrack(trackName);
 		
 		if (cursorTrack.moveToNext()) {
@@ -271,7 +308,7 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 	 * @param View view the selected track
 	 */
 	@SuppressLint("HandlerLeak")
-	public void showPath(final View view){
+	public void showPath(final String trackName){
 		
 		//MA SERVE???
 		
@@ -291,7 +328,6 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 		Thread thread = new Thread() {
 			@Override
 			public void run() {
-				String trackName = getTrackName(view);
 				Cursor cursorTrack = dbAdapter.selectTrack(trackName);
 
 				if (cursorTrack.moveToNext()) {
@@ -312,9 +348,8 @@ public class PathListFragment extends Fragment implements OnItemClickListener{
 	 * Delete the selected track
 	 * @param view the selected track
 	 */
-	public void deletePath(View view){
+	public void deletePath(String trackName){
 		
-		String trackName = getTrackName(view);
 		deleteConfirm(trackName);
 	
 	}

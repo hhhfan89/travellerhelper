@@ -61,8 +61,8 @@
             android:name="it.divito.touristexplorer.MainActivity"
             android:configChanges="orientation|keyboardHidden"
             android:windowSoftInputMode="adjustPan"
-            android:theme="@style/Theme.AppCompat.Light"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:theme="@style/Theme.AppCompat.Light">
         </activity>
         <activity
             android:name="it.divito.touristexplorer.poi.AudioActivity"
