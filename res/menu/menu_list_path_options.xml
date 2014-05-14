@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_home" >
+
+    <item
+        android:id="@+id/path_list_show"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/path_list_show"
+        android:orderInCategory="1"
+        yourapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/path_list_export"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/path_list_export"
+        android:orderInCategory="2"
+        yourapp:showAsAction="always"/>
+   
+    <item
+        android:id="@+id/path_list_delete"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/path_list_delete"
+        android:orderInCategory="3"
+        yourapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/path_list_info"
+        android:icon="@drawable/ic_action_play"
+        android:title="@string/path_list_info"
+        android:orderInCategory="4"
+        yourapp:showAsAction="always"/>
+	
+</menu>

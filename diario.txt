@@ -1,0 +1,11 @@
+12/05:
+rivedere FragmentPathList, perchè il click sui singoli item non funziona (ne tantomeno sugli imagebutton), vedere se 
+conviene fare con ListFragemnt!!!
+
+13/05:
+sistemato FragmentPathList, fare popup singolo item
+da vedere ic_action_drawer
+
+14/05:
+sistemare icona, mettere invisibile a sinistra, in modo tale da distanziarla dal ic_action_drawer
+aggiunto context_menu in pathListFragment, bisogna rivedere il tutto per fare le successive azioni
